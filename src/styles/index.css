@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-text: theme("colors.text-light");
+  --color-bg: theme("colors.bg-light");
+}
+
+.dark {
+  --color-text: theme("colors.text-dark");
+  --color-bg: theme("colors.bg-dark");
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  @apply font-sans text-base;
+}

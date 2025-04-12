@@ -1,12 +1,11 @@
+import AppLayout from "./layout/AppLayout";
 
 function App() {
   return (
-  <>
-    <div className="bg-white text-black dark:bg-black dark:text-white">
-      Nigga now what?
-    </div>
-  </>
-)
+    <AppLayout>
+      <div className="text-xl font-serif">Hello World!, Really?</div>
+    </AppLayout>
+  );
 }
 
-export default App
+export default App;
