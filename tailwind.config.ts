@@ -2,10 +2,7 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: "class",
-  content: [
-    "./src/**/*.{html,js,ts,jsx,tsx}",
-    "./index.html",
-  ],
+  content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./index.html"],
   theme: {
     extend: {
       colors: {
@@ -19,6 +16,13 @@ export default {
       fontFamily: {
         sans: ["Open Runde"],
         serif: ["Catamaran"],
+      },
+      fontSize: {
+        sm: "0.875rem",
+        base: "1rem",
+        lg: "1.125rem",
+        xl: "1.25rem",
+        "2xl": "1.5rem",
       },
     },
   },
