@@ -5,3 +5,8 @@ export interface LayoutProps {
 export interface HeaderProps {
   title: string;
 }
+
+export enum Theme {
+  Light = "Light",
+  Dark = "Dark",
+}
