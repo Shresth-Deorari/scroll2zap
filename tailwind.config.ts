@@ -23,7 +23,7 @@ export default {
         lg: "1.125rem",
         xl: "1.25rem",
         "2xl": "2rem",
-        "big-chungus": "4rem",
+        "big-chungus": "4rem",  //for titles
       },
     },
   },
