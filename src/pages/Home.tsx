@@ -4,24 +4,24 @@ const Home = () => {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center py-8 gap-8 text-center">
+    <div className="flex flex-col items-center justify-center py-10 gap-8 text-center font-sans">
       <section className="flex flex-col items-center">
-        <h2 className="text-big-chungus font-serif mb-8 font-bold">
+        <h2 className="text-big-chungus mb-8 font-bold">
           Welcome to Scoll 2 Zap⚡
         </h2>
-        <div className="max-w-2xl text-center">
+        <div className="max-w-2xl text-center text-xl font-semibold text-gray-500">
           This site lets you interact with your Lightning wallet directly.
-          Scroll to pay, send sats to friends, and explore WebLN features!
+          Scroll to pay send sats to friends, and explore WebLN features!
         </div>
       </section>
 
-      <section>
+      <section className="flex items-center">
         {!isWalletConnected ? (
           <button
             onClick={() => {
               /* ToDo: connect wallet logic here */
             }}
-            className="p-3 rounded-lg bg-blue text-bg-dark font-semibold shadow hover:opacity-90"
+            className="px-3 py-2  bg-bg-dark dark:bg-bg-light dark:text-text-light text-text-dark text-xl "
           >
             Connect Wallet
           </button>
@@ -34,8 +34,8 @@ const Home = () => {
         )}
       </section>
 
-      <section className="w-full max-w-md">
-        <h3 className="text-xl font-sans mb-3">💸 Send Payment</h3>
+      <section className="flex flex-col items-center w-full max-w-md my-10 ">
+        <h3 className="mb-8 dark:text-emerald-500 text-emerald-900">💸 Send Payment</h3>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -43,21 +43,11 @@ const Home = () => {
           }}
           className="flex flex-col gap-3"
         >
-          <input
-            type="number"
-            placeholder="Amount (sats)"
-            className="p-2 rounded border bg-bg-light dark:bg-bg-dark"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Recipient LN Address"
-            className="p-2 rounded border bg-bg-light dark:bg-bg-dark"
-            required
-          />
+          <input type="number" placeholder="Amount (sats)" required />
+          <input type="text" placeholder="Recipient LN Address" required />
           <button
             type="submit"
-            className="p-3 bg-brand_yellow rounded-lg text-text-light dark:text-text-dark font-semibold shadow hover:opacity-90"
+            className="p-3 mt-2 bg-brand_yellow rounded-lg text-text-light"
           >
             Send Payment
           </button>
