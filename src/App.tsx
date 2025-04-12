@@ -3,7 +3,7 @@ import AppLayout from "./layout/AppLayout";
 function App() {
   return (
     <AppLayout>
-      <div>Hello World!, Really?</div>
+      <div className="text-xl font-serif">Hello World!, Really?</div>
     </AppLayout>
   );
 }
