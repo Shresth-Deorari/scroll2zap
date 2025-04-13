@@ -14,8 +14,7 @@ export default {
         "text-dark": "#E5E7EB",
       },
       fontFamily: {
-        sans: ["Open Runde"],
-        serif: ["Catamaran"],
+        roboto: ["Roboto Mono"],
       },
       fontSize: {
         sm: "0.875rem",
@@ -23,6 +22,7 @@ export default {
         lg: "1.125rem",
         xl: "1.25rem",
         "2xl": "2rem",
+        "big-chungus": "4rem", //for titles
       },
     },
   },
