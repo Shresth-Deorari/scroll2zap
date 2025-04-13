@@ -1,9 +1,10 @@
 import AppLayout from "./layout/AppLayout";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <AppLayout>
-      <div className="text-xl font-serif">Hello World!, Really?</div>
+      <Home/>
     </AppLayout>
   );
 }
