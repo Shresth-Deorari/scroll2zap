@@ -1,14 +1,21 @@
 import { PayButton } from "@getalby/bitcoin-connect-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function PaymentComponent() {
+function PaymentComponent({
+  recipient,
+  amount,
+}: {
+  recipient: string;
+  amount: number;
+}) {
   const [invoice, setInvoice] = useState<string>("");
 
-  const fetchInvoice = async () => {
-    // Replace with your invoice-fetching logic (e.g., API call)
-    const newInvoice = "lnbc..."; // Example invoice
-    setInvoice(newInvoice);
-  };
+  useEffect(() => {
+    if (recipient && amount > 0) {
+      const generatedInvoice = `lnbc${amount}1p....`; // Todo: Replace with real invoice generation
+      setInvoice(generatedInvoice);
+    }
+  }, [recipient, amount]);
 
   const handlePaid = (response: { preimage: string }) => {
     console.log("Payment successful:", response.preimage);
@@ -17,12 +24,7 @@ function PaymentComponent() {
 
   return (
     <div>
-      <h2>Make a Payment</h2>
-      <PayButton
-        invoice={invoice}
-        onClick={fetchInvoice} // Fetch invoice when clicked
-        onPaid={handlePaid} // Handle successful payment
-      />
+      <PayButton invoice={invoice} onPaid={handlePaid} />
     </div>
   );
 }
