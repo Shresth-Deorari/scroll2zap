@@ -1,0 +1,14 @@
+@layer base {
+  /* or @layer components if split */
+  input {
+    @apply p-2 w-full max-w-md rounded border bg-slate-200 dark:bg-slate-800;
+  }
+
+  h3 {
+    @apply text-2xl mb-3 font-semibold;
+  }
+
+  button {
+    @apply rounded-lg font-semibold shadow hover:opacity-90;
+  }
+}

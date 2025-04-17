@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { WebLNContext } from "../context/WebLnProvider";
+import { WebLNContext } from "../../context/WebLnProvider";
 import { QRCodeSVG } from "qrcode.react";
 
 const ReceivePayment = () => {

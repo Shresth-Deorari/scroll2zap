@@ -7,29 +7,19 @@
 :root {
   --color-text: theme("colors.text-light");
   --color-bg: theme("colors.bg-light");
+  --color-brand: theme("colors.brand_yellow");
+  --color-accent: theme("colors.blue");
 }
 
 .dark {
   --color-text: theme("colors.text-dark");
   --color-bg: theme("colors.bg-dark");
+  --color-brand: theme("colors.brand_yellow");
+  --color-accent: theme("colors.blue");
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   @apply font-roboto text-base;
-}
-
-@layer base {
-  input {
-    @apply p-2 w-[400px] rounded border bg-slate-200 dark:bg-slate-800;
-  }
-
-  h3 {
-    @apply text-2xl mb-3 font-semibold;
-  }
-
-  button {
-    @apply rounded-lg font-semibold shadow hover:opacity-90;
-  }
 }

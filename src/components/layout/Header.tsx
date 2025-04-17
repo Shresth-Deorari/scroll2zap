@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { HeaderProps } from "../types/types";
-import ThemeToggle from "./ThemeToggle";
+import { HeaderProps } from "../../types/types";
+import ThemeToggle from "../theme/ThemeToggle";
 
 const Header: FC<HeaderProps> = ({ title = "Scroll 2 Zap" }) => {
   return (
