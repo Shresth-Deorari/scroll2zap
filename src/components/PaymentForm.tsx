@@ -20,7 +20,6 @@ const PaymentForm = () => {
         <input
           type="number"
           placeholder="Amount (sats)"
-          value={amount}
           onChange={(e) => setAmount(Number(e.target.value))}
           required
         />
