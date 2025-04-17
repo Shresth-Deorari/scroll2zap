@@ -1,5 +1,4 @@
 @layer base {
-  /* or @layer components if split */
   input {
     @apply p-2 w-full max-w-md rounded border bg-slate-200 dark:bg-slate-800;
   }

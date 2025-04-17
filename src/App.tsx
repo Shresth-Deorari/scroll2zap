@@ -1,4 +1,4 @@
-import { WebLNProvider } from "./context/WebLnProvider";
+import { WebLNProvider } from "./context/WebLNProvider";
 import AppLayout from "./layout/AppLayout";
 import Home from "./pages/Home";
 
