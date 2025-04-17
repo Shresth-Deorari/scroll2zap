@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Theme } from "../types";
+import { Theme } from "../types/types";
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState<Theme>(Theme.Dark);
