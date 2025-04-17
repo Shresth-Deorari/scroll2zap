@@ -18,6 +18,7 @@
     "@getalby/lightning-tools": "^5.1.2",
     "@getalby/sdk": "^4.1.1",
     "framer-motion": "^12.6.5",
+    "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "webln": "^0.3.2"
