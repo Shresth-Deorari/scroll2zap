@@ -1,5 +1,6 @@
 import WalletConnection from "../components/WalletComponent";
 import PaymentForm from "../components/PaymentForm";
+import ReceivePayment from "../components/RecieveComponent";
 
 const Home = () => (
   <div className="flex flex-col items-center justify-center py-10 gap-8 text-center font-sans">
@@ -18,6 +19,7 @@ const Home = () => (
     </section>
 
     <PaymentForm />
+    <ReceivePayment />
   </div>
 );
 
