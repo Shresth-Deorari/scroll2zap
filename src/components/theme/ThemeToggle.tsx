@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Theme } from "../../types/types";
+import "@theme-toggles/react/css/Around.css";
+import { Around } from "@theme-toggles/react";
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState<Theme>(Theme.Dark);
@@ -21,22 +23,27 @@ const ThemeToggle = () => {
       setTheme(defaultTheme);
       document.documentElement.classList.toggle("dark", systemPrefersDark);
     }
-  });
+  }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === Theme.Dark ? Theme.Light : Theme.Dark;
     setTheme(newTheme);
     document.documentElement.classList.toggle("dark", newTheme === Theme.Dark);
     localStorage.setItem("theme", newTheme);
+    console.log("Theme toggled to:", newTheme);
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="w-[48px] rounded-full text-2xl bg-text-light dark:bg-text-dark text-bg-light dark:text-bg-dark"
-    >
-      {theme === Theme.Dark ? "☀️" : "🌙"}
-    </button>
+    <Around
+      aria-label="Toggle Theme"
+      title="Toggle Theme"
+      toggled={theme === Theme.Dark}
+      onToggle={toggleTheme}
+      duration={750}
+      placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
+    />
   );
 };
 

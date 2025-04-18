@@ -17,6 +17,7 @@
     "@getalby/bitcoin-connect-react": "^3.7.1",
     "@getalby/lightning-tools": "^5.1.2",
     "@getalby/sdk": "^4.1.1",
+    "@theme-toggles/react": "^4.1.0",
     "framer-motion": "^12.6.5",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",

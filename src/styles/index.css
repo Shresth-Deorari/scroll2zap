@@ -5,21 +5,59 @@
 @tailwind utilities;
 
 :root {
-  --color-text: theme("colors.text-light");
-  --color-bg: theme("colors.bg-light");
-  --color-brand: theme("colors.brand_yellow");
-  --color-accent: theme("colors.blue");
+  /* === GLOBAL COLOURS === */
+  --color-text: #2d3748; /* muted dark gray for text */
+  --color-bg: #F7F7FF; /* soft off-white background */
+  --color-accent: #4fd1c5; /* subtle teal accent */
+
+  /* === HEADER === */
+  --color-header-bg: #edf2f7; /* clean light gray backdrop */
+  --color-header-text: #2d3748; /* primary text */
+
+  /* === BUTTON === */
+  --color-button-bg: #ee8e18;
+  --color-button-text: #1a202c;
+  --color-button-hover: #38b2ac;
+  --color-button-active: #319795;
+  --color-button-disabled: #e2e8f0; /* soft gray */
+
+  /* === INPUT === */
+  --color-input-bg: #edf2f7; /* light gray */
+  --color-input-text: #2d3748;
+  --color-input-border: #a0aec0; /* muted slate */
+  --color-input-focus: #4fd1c5;
+  --color-input-placeholder: #a0aec0; /* soft gray */
+
+  /* === HEADING / SUBHEADINGS === */
+  --color-heading: #2d3748;
+  --color-subheading: #718096; /* warm slate */
 }
 
 .dark {
-  --color-text: theme("colors.text-dark");
-  --color-bg: theme("colors.bg-dark");
-  --color-brand: theme("colors.brand_yellow");
-  --color-accent: theme("colors.blue");
-}
+  /* === GLOBAL COLOURS === */
+  --color-text: #e2e8f0; /* soft light gray */
+  --color-bg: #161925; /* deep charcoal */
+  --color-accent: #4fd1c5;
 
-body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  @apply font-roboto text-base;
+  /* === HEADER === */
+  --color-header-bg: #2d3748; /* dark slate */
+  --color-header-text: #e2e8f0;
+
+  /* === BUTTON === */
+  --color-button-bg: #ee8e18;
+  --color-button-text: #1a202c;
+  --color-button-hover: #38b2ac;
+  --color-button-active: #319795;
+  --color-button-disabled: #4a5568; /* dark slate */
+
+  /* === INPUT === */
+  --color-input-bg: #2d3748; /* dark slate */
+  --color-input-text: #e2e8f0;
+  --color-input-border: #4a5568; /* darker slate */
+  --color-input-focus: #4fd1c5;
+  --color-input-placeholder: #718096;
+
+  /* === HEADING / SUBHEADINGS === */
+  --color-heading: #e2e8f0;
+  --color-subheading: #a0aec0; /* light slate */
 }

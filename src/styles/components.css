@@ -1,13 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   input {
-    @apply p-2 w-full max-w-md rounded border bg-slate-200 dark:bg-slate-800;
+    background: var(--color-input-bg);
+    color: var(--color-input-text);
+    border-color: var(--color-input-border);
+  }
+
+  input:focus {
+    border-color: var(--color-input-focus);
+  }
+
+  input::placeholder {
+    color: var(--color-input-placeholder);
   }
 
   h3 {
     @apply text-2xl mb-3 font-semibold;
   }
 
-  button {
-    @apply rounded-lg font-semibold shadow hover:opacity-90;
+  .input_button {
+    background: var(--color-button-bg);
+    color: var(--color-button-text);
+    font-size:large;
+    font-weight:500;
+  }
+
+  .input_button:hover {
+    background: var(--color-button-hover);
+  }
+
+  .input_button:active {
+    background: var(--color-button-active);
+  }
+
+  .input_button:disabled {
+    background: var(--color-button-disabled);
+  }
+
+  button:hover {
+  
   }
 }
