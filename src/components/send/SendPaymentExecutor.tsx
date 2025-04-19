@@ -1,6 +1,6 @@
 import { PayButton } from "@getalby/bitcoin-connect-react";
 
-function PaymentComponent({ invoice }: { invoice: string }) {
+function SendPaymentExecutor({ invoice }: { invoice: string }) {
   const handlePaid = (response: { preimage: string }) => {
     console.log("Payment successful:", response.preimage);
     alert("Payment successful!");
@@ -13,4 +13,4 @@ function PaymentComponent({ invoice }: { invoice: string }) {
   );
 }
 
-export default PaymentComponent;
+export default SendPaymentExecutor;

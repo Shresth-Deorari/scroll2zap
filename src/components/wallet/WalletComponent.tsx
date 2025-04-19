@@ -3,7 +3,7 @@ import { WebLNContext } from "../../context/WebLNProvider";
 import { Button } from "@getalby/bitcoin-connect-react";
 import { webln as WebLN } from "@getalby/sdk";
 
-const WalletConnection = () => {
+const WalletConnector = () => {
   const webln = useContext(WebLNContext);
   const [walletInfo, setWalletInfo] = useState<{
     alias?: string;
@@ -95,4 +95,4 @@ const WalletConnection = () => {
   );
 };
 
-export default WalletConnection;
+export default WalletConnector;
