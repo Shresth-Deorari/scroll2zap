@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PaymentComponent from "./PaymentComponent";
 import { LightningAddress } from "@getalby/lightning-tools";
+import bitcoin from "../../assets/bitcoin-logo.svg";
 
 const PaymentForm = () => {
   const [amount, setAmount] = useState<number>(0);
@@ -29,16 +30,17 @@ const PaymentForm = () => {
 
   return (
     <section className="flex flex-col items-center w-full max-w-md my-10">
-      <h3 className="mb-8 dark:text-emerald-500 text-emerald-900">
-        💸 Send Payment
+      <h3 className="mb-8 flex items-center gap-2">
+        <img src={bitcoin} alt="Bitcoin Logo" className="w-6 h-6" />
+        Send Payment
       </h3>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 w-full">
         <input
           type="number"
           placeholder="Amount (sats)"
           value={amount || ""}
           onChange={(e) => setAmount(Number(e.target.value))}
-          className="p-2 border rounded"
+          className="p-2 border rounded bg-[var(--color-input-bg)] text-[var(--color-text)]"
           required
         />
         <input
@@ -46,14 +48,14 @@ const PaymentForm = () => {
           placeholder="Recipient LN Address"
           value={recipient}
           onChange={(e) => setRecipient(e.target.value)}
-          className="p-2 border rounded"
+          className="p-2 border rounded bg-[var(--color-input-bg)] text-[var(--color-text)]"
           required
         />
         <button
           type="button"
           onClick={handleGenerateInvoice}
           disabled={loading}
-          className="p-2 bg-emerald-500 text-white rounded disabled:bg-gray-400"
+          className="p-2 rounded text-white input_button"
         >
           {loading ? "Generating..." : "Generate Invoice"}
         </button>

@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import { WebLNContext } from "../../context/WebLnProvider";
+import { WebLNContext } from "../../context/WebLNProvider";
 import { Button } from "@getalby/bitcoin-connect-react";
 import { webln as WebLN } from "@getalby/sdk";
 
@@ -59,15 +59,24 @@ const WalletConnection = () => {
 
   if (!webln) {
     return (
-      <div className="p-4">
+      <div
+        className="p-4"
+        style={
+          {
+            "--bc-color-brand": "#ee8e18",
+            "--bc-color-brand-button-text": "#1A202C",
+            "--bc-color-brand-hover": "#f0a242",
+          } as React.CSSProperties
+        }
+      >
         <Button />
       </div>
     );
   }
 
   return (
-    <div className="p-4 rounded-lg bg-text-dark text-bg-dark dark:bg-text-light dark:text-bg-light shadow">
-      <h3 className="text-xl mb-2">🔗 Wallet Connected</h3>
+    <div className="p-4 w-[680px] rounded-lg text-bg-dark dark:bg-text-light dark:text-bg-light shadow">
+      <h3 className="text-xl font-semibold mb-2 "> Wallet Connected</h3>
       {loading && <p>Loading wallet info...</p>}
       {error && <p className="text-red-500">{error}</p>}
       {!loading && !error && (
