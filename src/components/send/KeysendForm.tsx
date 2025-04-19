@@ -1,20 +1,25 @@
-import { useContext, useState } from "react";
-import { WebLNContext } from "../../context/WebLNProvider";
+import { useState } from "react";
+import { useWebLN } from "../../context/WebLNProvider";
 
 const KeysendForm = () => {
-  const webln = useContext(WebLNContext);
+  const { webln, loading, setLoading } = useWebLN();
   const [pubkey, setPubkey] = useState<string>("");
   const [amount, setAmount] = useState<number>(0);
-  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 
   const handleKeysend = async () => {
     if (!webln) {
-      alert("Please connect your wallet first.");
+      setError("Please connect your wallet first.");
       return;
     }
-    if (!pubkey || amount <= 0) {
-      setError("Please enter a valid pubkey and amount.");
+    if (!pubkey.match(/^0[2-3][0-9a-fA-F]{64,66}$/)) {
+      setError(
+        "Invalid pubkey format. Use a 33-byte hex string starting with 02 or 03.",
+      );
+      return;
+    }
+    if (amount <= 0 || amount > 1000000) {
+      setError("Amount must be between 1 and 1,000,000 sats.");
       return;
     }
     setLoading(true);
@@ -53,7 +58,7 @@ const KeysendForm = () => {
         <button
           type="button"
           onClick={handleKeysend}
-          disabled={loading || !pubkey || amount <= 0}
+          disabled={loading}
           className="input_button"
         >
           {loading ? "Sending..." : "Send Keysend"}

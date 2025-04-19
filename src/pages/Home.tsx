@@ -1,7 +1,7 @@
 import WalletConnector from "../components/wallet/WalletComponent";
 import SendInvoiceForm from "../components/send/SendInvoiceForm";
 import ReceiveInvoiceGenerator from "../components/recieve/ReceiveInvoiceGenerator";
-import KeysendForm from "../components/send/KeySendForm";
+import KeysendForm from "../components/send/KeysendForm";
 
 const Home = () => (
   <div className="flex flex-col items-center justify-center py-10 gap-8 text-center font-sans text-[var(--color-text)]">

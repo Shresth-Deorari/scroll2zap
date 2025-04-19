@@ -2,12 +2,13 @@ import { useState } from "react";
 import SendPaymentExecutor from "./SendPaymentExecutor";
 import { LightningAddress } from "@getalby/lightning-tools";
 import bitcoin from "../../assets/bitcoin-logo.svg";
+import { useWebLN } from "../../context/WebLNProvider";
 
 const SendInvoiceForm = () => {
+  const { loading, setLoading } = useWebLN();
   const [amount, setAmount] = useState<number>(0);
   const [recipient, setRecipient] = useState<string>("");
   const [invoice, setInvoice] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
 
   const handleGenerateInvoice = async () => {
     if (!recipient || amount <= 0) {

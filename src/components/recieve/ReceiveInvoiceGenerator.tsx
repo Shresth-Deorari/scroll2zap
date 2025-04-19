@@ -1,13 +1,12 @@
-import { useContext, useState } from "react";
-import { WebLNContext } from "../../context/WebLNProvider";
+import { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import bitcoin from "../../assets/bitcoin-logo.svg";
+import { useWebLN } from "../../context/WebLNProvider";
 
 const ReceiveInvoiceGenerator = () => {
-  const webln = useContext(WebLNContext);
+  const { webln, loading, setLoading } = useWebLN();
   const [amount, setAmount] = useState<number>(0);
   const [invoice, setInvoice] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
 
   const handleGenerateInvoice = async () => {
     if (!webln) {
