@@ -40,7 +40,6 @@ const PaymentForm = () => {
           placeholder="Amount (sats)"
           value={amount || ""}
           onChange={(e) => setAmount(Number(e.target.value))}
-          className="p-2 border rounded bg-[var(--color-input-bg)] text-[var(--color-text)]"
           required
         />
         <input
@@ -48,14 +47,13 @@ const PaymentForm = () => {
           placeholder="Recipient LN Address"
           value={recipient}
           onChange={(e) => setRecipient(e.target.value)}
-          className="p-2 border rounded bg-[var(--color-input-bg)] text-[var(--color-text)]"
           required
         />
         <button
           type="button"
           onClick={handleGenerateInvoice}
           disabled={loading}
-          className="p-2 rounded text-white input_button"
+          className="input_button"
         >
           {loading ? "Generating..." : "Generate Invoice"}
         </button>

@@ -7,6 +7,9 @@
     background: var(--color-input-bg);
     color: var(--color-input-text);
     border-color: var(--color-input-border);
+    border-radius: 0.25rem;
+    border-width: 1px;
+    padding: 0.5rem;
   }
 
   input:focus {
@@ -24,8 +27,13 @@
   .input_button {
     background: var(--color-button-bg);
     color: var(--color-button-text);
-    font-size:large;
-    font-weight:500;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .input_button:hover {
@@ -38,9 +46,5 @@
 
   .input_button:disabled {
     background: var(--color-button-disabled);
-  }
-
-  button:hover {
-  
   }
 }
