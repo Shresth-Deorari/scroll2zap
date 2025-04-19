@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import bitcoin from "../../assets/bitcoin-logo.svg";
-import { useWebLN } from "../../context/WebLNProvider";
+import { useWebLN } from "../../context/WebLNContext";
 
 const ReceiveInvoiceGenerator = () => {
   const {

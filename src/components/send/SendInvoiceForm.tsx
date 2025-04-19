@@ -2,7 +2,7 @@ import { useState } from "react";
 import SendPaymentExecutor from "./SendPaymentExecutor";
 import { LightningAddress } from "@getalby/lightning-tools";
 import bitcoin from "../../assets/bitcoin-logo.svg";
-import { useWebLN } from "../../context/WebLNProvider";
+import { useWebLN } from "../../context/WebLNContext";
 
 const SendInvoiceForm = () => {
   const {

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useWebLN } from "../context/WebLNProvider";
+import { useWebLN } from "../context/WebLNContext";
 import { LightningAddress } from "@getalby/lightning-tools";
 
 const ScrollToPay = () => {
