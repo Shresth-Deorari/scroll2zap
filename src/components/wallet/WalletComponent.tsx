@@ -59,8 +59,17 @@ const WalletConnection = () => {
 
   if (!webln) {
     return (
-      <div className="p-4">
-        <Button/>
+      <div
+        className="p-4"
+        style={
+          {
+            "--bc-color-brand": "#ee8e18",
+            "--bc-color-brand-button-text": "#1A202C",
+            "--bc-color-brand-hover": "#f0a242",
+          } as React.CSSProperties
+        }
+      >
+        <Button />
       </div>
     );
   }

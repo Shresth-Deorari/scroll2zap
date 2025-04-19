@@ -17,7 +17,7 @@
   /* === BUTTON === */
   --color-button-bg: #ee8e18;
   --color-button-text: #1a202c;
-  --color-button-hover: #38b2ac;
+  --color-button-hover: #ef9a33;
   --color-button-active: #319795;
   --color-button-disabled: #e2e8f0; /* soft gray */
 
@@ -46,8 +46,8 @@
   /* === BUTTON === */
   --color-button-bg: #ee8e18;
   --color-button-text: #1a202c;
-  --color-button-hover: #38b2ac;
-  --color-button-active: #319795;
+  --color-button-hover: #ef9a33;
+  --color-button-active: #f0a242;
   --color-button-disabled: #4a5568; /* dark slate */
 
   /* === INPUT === */
