@@ -5,7 +5,11 @@ import bitcoin from "../../assets/bitcoin-logo.svg";
 import { useWebLN } from "../../context/WebLNProvider";
 
 const SendInvoiceForm = () => {
-  const { userLoading: loading, setUserLoading: setLoading } = useWebLN();
+  const {
+    userLoading: loading,
+    setUserLoading: setLoading,
+    webln,
+  } = useWebLN();
   const [amount, setAmount] = useState<number>(0);
   const [recipient, setRecipient] = useState<string>("");
   const [invoice, setInvoice] = useState<string>("");
@@ -56,7 +60,11 @@ const SendInvoiceForm = () => {
           disabled={loading}
           className="input_button"
         >
-          {loading ? "Generating..." : "Generate Invoice"}
+          {webln
+            ? loading
+              ? "Generating..."
+              : "Generate Invoice"
+            : "Generate Invoice"}
         </button>
         {invoice && <SendPaymentExecutor invoice={invoice} />}
       </div>

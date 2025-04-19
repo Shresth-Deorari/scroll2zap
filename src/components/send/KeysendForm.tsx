@@ -2,7 +2,11 @@ import { useState } from "react";
 import { useWebLN } from "../../context/WebLNProvider";
 
 const KeysendForm = () => {
-  const { webln, userLoading: loading, setUserLoading: setLoading } = useWebLN();
+  const {
+    webln,
+    userLoading: loading,
+    setUserLoading: setLoading,
+  } = useWebLN();
   const [pubkey, setPubkey] = useState<string>("");
   const [amount, setAmount] = useState<number>(0);
   const [error, setError] = useState<string>("");
@@ -61,7 +65,7 @@ const KeysendForm = () => {
           disabled={loading}
           className="input_button"
         >
-          {loading ? "Sending..." : "Send Keysend"}
+          {webln ? (loading ? "Sending..." : "Send Keysend") : "Send Keysend"}
         </button>
         {error && <p className="text-red-500">{error}</p>}
       </div>

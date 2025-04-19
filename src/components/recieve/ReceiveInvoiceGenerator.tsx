@@ -4,7 +4,11 @@ import bitcoin from "../../assets/bitcoin-logo.svg";
 import { useWebLN } from "../../context/WebLNProvider";
 
 const ReceiveInvoiceGenerator = () => {
-  const { webln, userLoading: loading, setUserLoading: setLoading } = useWebLN();
+  const {
+    webln,
+    userLoading: loading,
+    setUserLoading: setLoading,
+  } = useWebLN();
   const [amount, setAmount] = useState<number>(0);
   const [invoice, setInvoice] = useState<string>("");
 
@@ -49,7 +53,11 @@ const ReceiveInvoiceGenerator = () => {
           disabled={loading || !webln}
           className="input_button"
         >
-          {loading ? "Generating..." : "Generate Invoice"}
+          {webln
+            ? loading
+              ? "Generating..."
+              : "Generate Invoice"
+            : "Generate Invoice"}
         </button>
         {invoice && (
           <div className="mt-4 text-center">
