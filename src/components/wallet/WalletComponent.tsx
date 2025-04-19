@@ -1,22 +1,22 @@
-import { useContext, useState, useEffect } from "react";
-import { WebLNContext } from "../../context/WebLNProvider";
+import { useState, useEffect } from "react";
 import { Button } from "@getalby/bitcoin-connect-react";
+import { useWebLN } from "../../context/WebLNProvider";
 import { webln as WebLN } from "@getalby/sdk";
 
-const WalletConnection = () => {
-  const webln = useContext(WebLNContext);
+const WalletConnector = () => {
+  const { webln, userLoading: globalLoading } = useWebLN();
   const [walletInfo, setWalletInfo] = useState<{
     alias?: string;
     pubkey?: string;
     balance?: number;
   }>({});
-  const [loading, setLoading] = useState<boolean>(false);
+  const [localLoading, setLocalLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 
   useEffect(() => {
     const fetchWalletInfo = async () => {
       if (!webln) return;
-      setLoading(true);
+      setLocalLoading(true);
       try {
         // Try WebLN getInfo
         const info = await webln.getInfo();
@@ -50,7 +50,7 @@ const WalletConnection = () => {
         console.error("Error fetching wallet info:", err);
         setError("Failed to fetch wallet info. Please try reconnecting.");
       } finally {
-        setLoading(false);
+        setLocalLoading(false);
       }
     };
 
@@ -74,12 +74,14 @@ const WalletConnection = () => {
     );
   }
 
+  const isLoading = globalLoading || localLoading;
+
   return (
     <div className="p-4 w-[680px] rounded-lg text-bg-dark dark:bg-text-light dark:text-bg-light shadow">
-      <h3 className="text-xl font-semibold mb-2 "> Wallet Connected</h3>
-      {loading && <p>Loading wallet info...</p>}
+      <h3 className="text-xl font-semibold mb-2">Wallet Connected</h3>
+      {isLoading && <p>Loading wallet info...</p>}
       {error && <p className="text-red-500">{error}</p>}
-      {!loading && !error && (
+      {!isLoading && !error && (
         <>
           <p>Alias: {walletInfo.alias || "Unknown"}</p>
           <p>PubKey: {walletInfo.pubkey || "Unknown"}</p>
@@ -95,4 +97,4 @@ const WalletConnection = () => {
   );
 };
 
-export default WalletConnection;
+export default WalletConnector;

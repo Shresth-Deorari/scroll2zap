@@ -1,13 +1,18 @@
 import { useState } from "react";
-import PaymentComponent from "./PaymentComponent";
+import SendPaymentExecutor from "./SendPaymentExecutor";
 import { LightningAddress } from "@getalby/lightning-tools";
 import bitcoin from "../../assets/bitcoin-logo.svg";
+import { useWebLN } from "../../context/WebLNProvider";
 
-const PaymentForm = () => {
+const SendInvoiceForm = () => {
+  const {
+    userLoading: loading,
+    setUserLoading: setLoading,
+    webln,
+  } = useWebLN();
   const [amount, setAmount] = useState<number>(0);
   const [recipient, setRecipient] = useState<string>("");
   const [invoice, setInvoice] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
 
   const handleGenerateInvoice = async () => {
     if (!recipient || amount <= 0) {
@@ -40,7 +45,6 @@ const PaymentForm = () => {
           placeholder="Amount (sats)"
           value={amount || ""}
           onChange={(e) => setAmount(Number(e.target.value))}
-          className="p-2 border rounded bg-[var(--color-input-bg)] text-[var(--color-text)]"
           required
         />
         <input
@@ -48,21 +52,24 @@ const PaymentForm = () => {
           placeholder="Recipient LN Address"
           value={recipient}
           onChange={(e) => setRecipient(e.target.value)}
-          className="p-2 border rounded bg-[var(--color-input-bg)] text-[var(--color-text)]"
           required
         />
         <button
           type="button"
           onClick={handleGenerateInvoice}
           disabled={loading}
-          className="p-2 rounded text-white input_button"
+          className="input_button"
         >
-          {loading ? "Generating..." : "Generate Invoice"}
+          {webln
+            ? loading
+              ? "Generating..."
+              : "Generate Invoice"
+            : "Generate Invoice"}
         </button>
-        {invoice && <PaymentComponent invoice={invoice} />}
+        {invoice && <SendPaymentExecutor invoice={invoice} />}
       </div>
     </section>
   );
 };
 
-export default PaymentForm;
+export default SendInvoiceForm;
