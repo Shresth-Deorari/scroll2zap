@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useWebLN } from "../../context/WebLNProvider";
+import { useWebLN } from "../../context/WebLNContext";
 
 const KeysendForm = () => {
   const {

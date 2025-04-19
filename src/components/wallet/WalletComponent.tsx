@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@getalby/bitcoin-connect-react";
-import { useWebLN } from "../../context/WebLNProvider";
+import { useWebLN } from "../../context/WebLNContext";
 import { webln as WebLN } from "@getalby/sdk";
 
 const WalletConnector = () => {
