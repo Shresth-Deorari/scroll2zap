@@ -35,3 +35,11 @@ export interface WebLN {
   getBalance?: () => Promise<{ balance: number }>;
   enable?: () => Promise<void>;
 }
+
+export interface PaymentComponentProps {
+  invoice: string;
+}
+
+export interface PaymentResponse {
+  preimage: string;
+}
