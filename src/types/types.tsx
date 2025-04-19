@@ -18,3 +18,8 @@ export interface PaymentComponentProps {
 export interface PaymentResponse {
   preimage: string;
 }
+
+export interface ThemeContextType {
+  theme: Theme;
+  toggleTheme: () => void;
+}

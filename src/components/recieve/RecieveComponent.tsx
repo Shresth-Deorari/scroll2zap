@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { WebLNContext } from "../../context/WebLNProvider";
+import { WebLNContext } from "../../context/WebLNContext";
 import { QRCodeSVG } from "qrcode.react";
 import bitcoin from "../../assets/bitcoin-logo.svg"
 

@@ -1,16 +1,22 @@
-import { useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Theme } from "../../types/types";
 import "@theme-toggles/react/css/Around.css";
 import { Around } from "@theme-toggles/react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState<Theme>(Theme.Dark);
+  const context = useContext(ThemeContext);
+  
+  if (!context) {
+    throw new Error("ThemeToggle must be used within a ThemeProvider");
+  }
+
+  const { theme, toggleTheme } = context;
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") as Theme | null;
 
     if (storedTheme) {
-      setTheme(storedTheme);
       document.documentElement.classList.toggle(
         "dark",
         storedTheme === Theme.Dark,
@@ -20,18 +26,10 @@ const ThemeToggle = () => {
         "(prefers-color-scheme: dark)",
       ).matches;
       const defaultTheme = systemPrefersDark ? Theme.Dark : Theme.Light;
-      setTheme(defaultTheme);
       document.documentElement.classList.toggle("dark", systemPrefersDark);
+      localStorage.setItem("theme", defaultTheme);
     }
   }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === Theme.Dark ? Theme.Light : Theme.Dark;
-    setTheme(newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === Theme.Dark);
-    localStorage.setItem("theme", newTheme);
-    console.log("Theme toggled to:", newTheme);
-  };
 
   return (
     <Around

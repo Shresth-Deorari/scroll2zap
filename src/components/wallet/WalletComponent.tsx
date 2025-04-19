@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import { WebLNContext } from "../../context/WebLNProvider";
+import { WebLNContext } from "../../context/WebLNContext";
 import { Button } from "@getalby/bitcoin-connect-react";
 import { webln as WebLN } from "@getalby/sdk";
 
