@@ -7,7 +7,7 @@ export const WebLNProvider = ({ children }: { children: React.ReactNode }) => {
   const [webln, setWebln] = useState<any>(null);
 
   useEffect(() => {
-    init({ appName: "Your App Name" });
+    init({ appName: "Scroll 2 Zap" });
     onConnected((provider) => {
       window.webln = provider;
       setWebln(provider);

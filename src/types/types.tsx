@@ -10,3 +10,11 @@ export enum Theme {
   Light = "Light",
   Dark = "Dark",
 }
+
+export interface PaymentComponentProps {
+  invoice: string;
+}
+
+export interface PaymentResponse {
+  preimage: string;
+}
