@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useWebLN } from "../../context/WebLNProvider";
 
 const KeysendForm = () => {
-  const { webln, loading, setLoading } = useWebLN();
+  const { webln, userLoading: loading, setUserLoading: setLoading } = useWebLN();
   const [pubkey, setPubkey] = useState<string>("");
   const [amount, setAmount] = useState<number>(0);
   const [error, setError] = useState<string>("");

@@ -1,45 +1,43 @@
 import React, { createContext, useState, useEffect, ReactNode } from "react";
 import { init, onConnected } from "@getalby/bitcoin-connect";
-import { WebLN } from "../types/types"; // Adjust path to your types file
+import { WebLN } from "../types/types";
 
 interface WebLNContextType {
   webln: WebLN | null;
-  loading: boolean;
-  setLoading: (loading: boolean) => void;
+  userLoading: boolean;
+  setUserLoading: (userLoading: boolean) => void;
 }
 
 const WebLNContext = createContext<WebLNContextType | undefined>(undefined);
 
 export const WebLNProvider = ({ children }: { children: ReactNode }) => {
   const [webln, setWebln] = useState<WebLN | null>(null);
-  const [loading, setLoading] = useState<boolean>(true); // Start as loading until connected
+  const [userLoading, setUserLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    setLoading(true); // Start loading when initializing
-    init({ appName: "Scroll 2 Zap" }); // Replace with your app name
+    setUserLoading(true);
+    init({ appName: "Scroll 2 Zap" });
     const handleConnected = (provider: WebLN) => {
       window.webln = provider;
       setWebln(provider);
-      setLoading(false); // Stop loading once connected
+      setUserLoading(false);
     };
 
     onConnected(handleConnected);
 
-    // Cleanup or fallback if connection fails
     return () => {
       // Optional: Remove event listener if supported (check @getalby/bitcoin-connect docs)
     };
   }, []);
 
-  // Fallback if connection never happens
   useEffect(() => {
-    if (!webln && !loading) {
+    if (!webln && !userLoading) {
       console.warn("WebLN connection failed or not available.");
-      setLoading(false); // Ensure loading stops if no connection
+      setUserLoading(false);
     }
-  }, [webln, loading]);
+  }, [webln, userLoading]);
 
-  const value = { webln, loading, setLoading };
+  const value = { webln, userLoading, setUserLoading };
 
   return (
     <WebLNContext.Provider value={value}>{children}</WebLNContext.Provider>

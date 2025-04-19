@@ -4,7 +4,7 @@ import { useWebLN } from "../../context/WebLNProvider";
 import { webln as WebLN } from "@getalby/sdk";
 
 const WalletConnector = () => {
-  const { webln, loading: globalLoading } = useWebLN();
+  const { webln, userLoading: globalLoading } = useWebLN();
   const [walletInfo, setWalletInfo] = useState<{
     alias?: string;
     pubkey?: string;

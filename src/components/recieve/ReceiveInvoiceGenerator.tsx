@@ -4,7 +4,7 @@ import bitcoin from "../../assets/bitcoin-logo.svg";
 import { useWebLN } from "../../context/WebLNProvider";
 
 const ReceiveInvoiceGenerator = () => {
-  const { webln, loading, setLoading } = useWebLN();
+  const { webln, userLoading: loading, setUserLoading: setLoading } = useWebLN();
   const [amount, setAmount] = useState<number>(0);
   const [invoice, setInvoice] = useState<string>("");
 
