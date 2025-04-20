@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useWebLN } from "../../context/WebLNContext";
+import bitcoin from "../../assets/bitcoin-logo.svg";
 
 const KeysendForm = () => {
   const {
@@ -45,7 +46,10 @@ const KeysendForm = () => {
 
   return (
     <section className="flex flex-col items-center w-full max-w-md my-10">
-      <h3 className="mb-8 flex items-center gap-2">Keysend Payment</h3>
+      <h3 className="mb-8 flex items-center gap-2">
+        <img src={bitcoin} alt="Bitcoin Logo" className="w-6 h-6" />
+        Keysend Payment
+      </h3>
       <div className="flex flex-col gap-3 w-full">
         <input
           type="text"
