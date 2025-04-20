@@ -17,11 +17,14 @@
     "@getalby/bitcoin-connect-react": "^3.7.1",
     "@getalby/lightning-tools": "^5.1.2",
     "@getalby/sdk": "^4.1.1",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
     "@theme-toggles/react": "^4.1.0",
-    "framer-motion": "^12.6.5",
+    "framer-motion": "^12.7.4",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "webln": "^0.3.2"
   },
   "devDependencies": {
