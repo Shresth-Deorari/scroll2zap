@@ -21,7 +21,7 @@
   }
 
   h3 {
-    @apply text-2xl mb-3 font-semibold;
+    @apply text-2xl mb-3 font-semibold font-roboto;
   }
 
   .input_button {
