@@ -34,7 +34,7 @@ const SendInvoiceForm = () => {
   };
 
   return (
-    <section className="flex flex-col items-center w-full max-w-md my-10">
+    <section className="flex flex-col items-center w-full max-w-md my-10 mt-16">
       <h3 className="mb-8 flex items-center gap-2">
         <img src={bitcoin} alt="Bitcoin Logo" className="w-6 h-6" />
         Send Payment
