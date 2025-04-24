@@ -6,41 +6,41 @@
 
 :root {
   /* === GLOBAL COLOURS === */
-  --color-text: #2d3748; /* muted dark gray for text */
-  --color-bg: #F7F7FF; /* soft off-white background */
-  --color-accent: #4fd1c5; /* subtle teal accent */
+  --color-text: #2d3748; 
+  --color-bg: #F7F7FF; 
+  --color-accent: #4fd1c5; 
 
   /* === HEADER === */
-  --color-header-bg: #edf2f7; /* clean light gray backdrop */
-  --color-header-text: #2d3748; /* primary text */
+  --color-header-bg: #edf2f7; 
+  --color-header-text: #2d3748;
 
   /* === BUTTON === */
   --color-button-bg: #ee8e18;
   --color-button-text: #1a202c;
   --color-button-hover: #ef9a33;
   --color-button-active: #319795;
-  --color-button-disabled: #e2e8f0; /* soft gray */
+  --color-button-disabled: #e2e8f0; 
 
   /* === INPUT === */
-  --color-input-bg: #edf2f7; /* light gray */
+  --color-input-bg: #edf2f7; 
   --color-input-text: #2d3748;
-  --color-input-border: #a0aec0; /* muted slate */
+  --color-input-border: #a0aec0; 
   --color-input-focus: #4fd1c5;
-  --color-input-placeholder: #a0aec0; /* soft gray */
+  --color-input-placeholder: #a0aec0; 
 
   /* === HEADING / SUBHEADINGS === */
   --color-heading: #2d3748;
-  --color-subheading: #718096; /* warm slate */
+  --color-subheading: #718096;
 }
 
 .dark {
   /* === GLOBAL COLOURS === */
-  --color-text: #e2e8f0; /* soft light gray */
-  --color-bg: #161925; /* deep charcoal */
+  --color-text: #e2e8f0; 
+  --color-bg: #161925; 
   --color-accent: #4fd1c5;
 
   /* === HEADER === */
-  --color-header-bg: #2d3748; /* dark slate */
+  --color-header-bg: #2d3748; 
   --color-header-text: #e2e8f0;
 
   /* === BUTTON === */
@@ -48,16 +48,16 @@
   --color-button-text: #1a202c;
   --color-button-hover: #ef9a33;
   --color-button-active: #f0a242;
-  --color-button-disabled: #4a5568; /* dark slate */
+  --color-button-disabled: #4a5568;
 
   /* === INPUT === */
-  --color-input-bg: #2d3748; /* dark slate */
+  --color-input-bg: #2d3748; 
   --color-input-text: #e2e8f0;
-  --color-input-border: #4a5568; /* darker slate */
+  --color-input-border: #4a5568; 
   --color-input-focus: #4fd1c5;
   --color-input-placeholder: #718096;
 
   /* === HEADING / SUBHEADINGS === */
   --color-heading: #e2e8f0;
-  --color-subheading: #a0aec0; /* light slate */
+  --color-subheading: #a0aec0; 
 }
