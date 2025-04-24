@@ -1,5 +1,25 @@
 # Scroll2Zap⚡: Lightning Web Application
 
+## Visual Overview
+
+The application's user interface is shown below:
+
+<div style="display: flex; felx-drection; flex-wrap: wrap; justify-content: center; gap: 10px;">
+  <img src="images/h1.png" alt="Home Page" style="width: 50%;" />
+  <div style="display: flex; flex-direction: column; width: 48%;">
+    <img src="images/h2.png" alt="Page 2" style="margin-bottom: 5px; width: 100%;" />
+    <img src="images/h3.png" alt="Page 3" style="width: 100%;" />
+  </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px;">
+  <img src="images/d1.png" alt="Dark Mode Home Page" style="width: 50%;" />
+  <div style="display: flex; flex-direction: column; width: 48%;">
+    <img src="images/d2.png" alt="Dark Mode Page 2" style="margin-bottom: 5px; width: 100%;" />
+    <img src="images/d3.png" alt="Dark Mode Page 3" style="width: 100%;" />
+  </div>
+</div>
+
 ## Project Description
 
 Scroll2Zap is a modern and minimal Lightning Web Application, designed to deliver smooth WebLN interactions in real-time. This application allows users to send Lightning payments and interact with WebLN in an intuitive way. Also Scrolling on the Websites transfers 1 sats to me! 😊
