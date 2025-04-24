@@ -1,54 +1,98 @@
-# React + TypeScript + Vite
+# Scroll2Zap⚡: Lightning Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+Scroll2Zap is a modern and minimal Lightning Web Application, designed to deliver smooth WebLN interactions in real-time. This application allows users to send Lightning payments and interact with WebLN in an intuitive way. Also Scrolling on the Websites transfers 1 sats to me! 😊
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+* **getInfo:** Fetch and display information about the user's Lightning wallet.
+* **sendPayment:** Send payments using WebLN.
+* **keysend:** Send keysend payments to a recipient.
+* **Auto-payment on Scroll:** Trigger a WebLN payment (1 sat) whenever the user scrolls on the website.
+* **makeInvoice:** Generate and display a Lightning invoice for a given amount.
+* **Pay via WebLN:** Accept an amount and LN address, then process the payment using WebLN's `sendPayment`.
+* **Dark Mode:** Supports both light and dark themes.
+* **QR Code Scanner:** Scan LN invoices and pay via WebLN.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technical Details
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* **Frontend:** React (with Vite)
+* **State Management:** React Hooks (`useState`, `useEffect`)
+* **Styling:** Tailwind CSS
+* **Lightning Integration:**
+    * WebLN API
+    * Alby browser extension
+    * Alby Packages:
+        * `@getalby/bitcoin-connect`: WebLN provider initialization.
+        * `@getalby/js-sdk`: Payment subscriptions, invoice generation, keysend.
+        * `@getalby/lightning-tools`: LN address resolution, keysend utilities.
+* **UI Libraries:**
+    * `@mui/icons-material`
+    * `@theme-toggles/react`
+* **QR Code:** `qrcode.react`
+* **Tooling:**
+    * Vite
+    * ESLint
+    * Prettier
+    * PostCSS
+    * Autoprefixer
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  Clone the repository:
+    ```bash
+    git clone <repository_url>
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd scroll2zap
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    ```
+4.  Run the application:
+    ```bash
+    npm run dev
+    ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Usage
+
+1.  Ensure you have a WebLN-enabled browser extension (like Alby) installed and configured.
+2.  Open the Scroll2Zap application in your browser.
+3.  Interact with the various features:
+    * Use the buttons to fetch wallet info, send payments, and generate invoices.
+    * Try the "Auto-payment on Scroll" feature by scrolling the page.
+    * Use the QR code scanner to scan and pay invoices.
+    * Toggle between light and dark mode using the theme toggle.
+
+## Code Structure
+
+The project follows a modular component architecture:
+
+* Components are separated based on functionality (e.g., payment, UI elements).
+* Logic, UI components, and assets are organized for maintainability.
+* React functional components with hooks are used.
+
+## Design
+
+* The application uses a modern and minimal design.
+* Tailwind CSS is used for utility-first styling, allowing for easy customization.
+* Theming is implemented with dark mode support.
+* Typography and responsiveness adhere to project design guidelines.
+
+## Documentation
+
+* For more in-depth information about the project's development process, please refer to the [Notion documentation](https://www.notion.so/Scroll2Zap-1d2396e6a0c880c684daf6ea45ea5101?pvs=4).
+
+## Author
+
+* Shresth Deorari
+    * GitHub: [Shresth-Deorari]([https://github.com/your-username](https://github.com/Shresth-Deorari))
+    * LinkedIn: [shresth-deorari-iit-patna](https://www.linkedin.com/in/shresth-deorari/)
+    * Email: shresthdeorari38@gmail.com
+
+## Acknowledgments
+
+* Thank you to the Alby team for their resources and support.
