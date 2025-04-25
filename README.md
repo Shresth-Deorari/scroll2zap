@@ -1,24 +1,26 @@
 # Scroll2Zap⚡: Lightning Web Application
 
-## Visual Overview
+## Demo Images
 
-The application's user interface is shown below:
-
-<div style="display: flex; felx-drection; flex-wrap: wrap; justify-content: center; gap: 10px;">
-  <img src="images/h1.png" alt="Home Page" style="width: 50%;" />
-  <div style="display: flex; flex-direction: column; width: 48%;">
-    <img src="images/h2.png" alt="Page 2" style="margin-bottom: 5px; width: 100%;" />
-    <img src="images/h3.png" alt="Page 3" style="width: 100%;" />
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+  <div>
+    <img src="images/h1.png" alt="Home Page" style="width: 50%;" />
+  </div>
+  <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <img src="images/h2.png" alt="Page 2" style="width: 25%; margin-bottom: 5px;" />
+    <img src="images/h3.png" alt="Page 3" style="width: 25%;" />
   </div>
 </div>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px;">
+
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; margin-top: 20px;">
   <img src="images/d1.png" alt="Dark Mode Home Page" style="width: 50%;" />
-  <div style="display: flex; flex-direction: column; width: 48%;">
-    <img src="images/d2.png" alt="Dark Mode Page 2" style="margin-bottom: 5px; width: 100%;" />
-    <img src="images/d3.png" alt="Dark Mode Page 3" style="width: 100%;" />
+  <div style="display: flex; flex-direction: column; justify-content: space-between;">
+    <img src="images/d2.png" alt="Dark Mode Page 2" style="width: 25%; margin-bottom: 5px;" />
+    <img src="images/d3.png" alt="Dark Mode Page 3" style="width: 25%;" />
   </div>
 </div>
+
 
 ## Project Description
 
