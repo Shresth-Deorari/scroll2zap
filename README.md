@@ -21,6 +21,10 @@
   </div>
 </div>
 
+## Demo Video for the Project
+
+[![Watch the demo](http://img.youtube.com/vi/6ZDhSX2cC7g/0.jpg)](https://youtu.be/6ZDhSX2cC7g)
+
 
 ## Project Description
 
@@ -111,7 +115,7 @@ The project follows a modular component architecture:
 ## Author
 
 * Shresth Deorari
-    * GitHub: [Shresth-Deorari]([https://github.com/your-username](https://github.com/Shresth-Deorari))
+    * GitHub: [Shresth-Deorari](https://github.com/Shresth-Deorari)
     * LinkedIn: [shresth-deorari-iit-patna](https://www.linkedin.com/in/shresth-deorari/)
     * Email: shresthdeorari38@gmail.com
 
