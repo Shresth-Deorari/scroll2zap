@@ -2,22 +2,22 @@
 
 ## Demo Images
 
-<div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;align-items:center">
   <div>
-    <img src="images/h1.png" alt="Home Page" style="width: 50%;" />
+    <img src="images/h1.png" alt="Home Page" style="width: 70%;" />
   </div>
-  <div style="display: flex; flex-direction: row; justify-content: space-between;">
-    <img src="images/h2.png" alt="Page 2" style="width: 25%; margin-bottom: 5px;" />
-    <img src="images/h3.png" alt="Page 3" style="width: 25%;" />
+  <div style="display: flex; flex-direction: row; justify-content: space-between;align-items:center">
+    <img src="images/h2.png" alt="Page 2" style="width: 35%; margin-bottom: 5px;" />
+    <img src="images/h3.png" alt="Page 3" style="width: 35%;" />
   </div>
 </div>
 
 
-<div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; margin-top: 20px;">
-  <img src="images/d1.png" alt="Dark Mode Home Page" style="width: 50%;" />
-  <div style="display: flex; flex-direction: column; justify-content: space-between;">
-    <img src="images/d2.png" alt="Dark Mode Page 2" style="width: 25%; margin-bottom: 5px;" />
-    <img src="images/d3.png" alt="Dark Mode Page 3" style="width: 25%;" />
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; margin-top: 20px;align-items:center">
+  <img src="images/d1.png" alt="Dark Mode Home Page" style="width: 70%;" />
+  <div style="display: flex; flex-direction: column; justify-content: space-between; align-items:center">
+    <img src="images/d2.png" alt="Dark Mode Page 2" style="width: 35%; margin-bottom: 5px;" />
+    <img src="images/d3.png" alt="Dark Mode Page 3" style="width: 35%;" />
   </div>
 </div>
 
